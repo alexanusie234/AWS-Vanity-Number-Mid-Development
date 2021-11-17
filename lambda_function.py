@@ -19,7 +19,7 @@ vanitynumbersstr = str(vanitynumbersbest)
 
 def lambda_handler(event, context):
     client.batch_write_item(RequestItems={
-        'vanitynumbers_resultsAA': [{ 'PutRequest': { 'Item': {
+        'Table Name Here': [{ 'PutRequest': { 'Item': {
             'caller number': { 'S': callernumber },
             'vanity numbers': { 'S': vanitynumbersstr }
         }}}]
